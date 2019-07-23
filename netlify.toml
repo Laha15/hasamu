@@ -1,0 +1,5 @@
+# SPA用の設定
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
