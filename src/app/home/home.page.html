@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <h1><img class="logo" src="assets/logo.png" alt=""></h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content main padding>
+  <div class="contents">
+    <div class="top">
+      <img class="main_img" src="assets/hasamu_chara.png" alt="">
+      <p>コーディングの際、テキストをタグで囲むのが面倒だったので製作しました。</p>
+      <p>複数行のテキストの入力に役立ちます。
+      </p>
+    </div>
+
+    <div class="ion-padding">
+      <p class="instruct_head">使用方法</p>
+      <p>「前につけるテキスト」に入力した文章が「本文」の前に、「後ろにつけるテキスト」に入力した文章が「本文」の後ろにつきます。</p>
+      <p>頻出タグボタンを押すと、書かれたタグを自動入力されます。</p>
+    </div>
+
+    <div class="ion-padding">
+      <p class="frequent_head">頻出タグ</p>
+      <ion-buttons margin-bottom>
+        <ion-button fill="solid" (click)="setTag('p')">Pタグ</ion-button>
+        <ion-button fill="solid" (click)="setTag('li')">liタグ</ion-button>
+        <ion-button fill="solid" (click)="setTag('a')">aタグ</ion-button>
+      </ion-buttons>
+
+      <ion-item class="before_text" margin-bottom>
+        <ion-label position='floating'>
+          <img src="assets/before_icon.png" alt="">
+          前につけるテキスト
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="beforeText"></ion-input>
+      </ion-item>
+
+      <ion-item class="after_text" margin-bottom>
+        <ion-label position='floating'>
+          <img src="assets/after_icon.png" alt="">
+          後ろにつけるテキスト
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="afterText"></ion-input>
+      </ion-item>
+
+      <ion-item class="body_text" margin-bottom>
+        <ion-label position='floating'>
+          <img src="assets/body_icon.png" alt="">
+          本文
+        </ion-label>
+        <ion-textarea rows="6" cols="20" [(ngModel)]="bodyText">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-button class="generate_btn" expand="block" (click)="generateText()">
+        生成
+      </ion-button>
+
+      <ion-item class="generated_text" margin-bottom>
+        <ion-label position='floating'>
+          <img src="assets/hasamu_chara.png" alt="">
+          生成されたテキスト
+        </ion-label>
+        <ion-textarea rows="6" cols="20" [(ngModel)]="newText">
+        </ion-textarea>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

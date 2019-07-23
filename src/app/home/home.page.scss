@@ -1,0 +1,74 @@
+.contents{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top{
+    width: 100%;
+    margin: 0 auto 20px;
+    text-align: center;
+    & img{
+        max-width: 400px;
+    }
+}
+
+.instruct_head, .frequent_head{
+    margin: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo{
+    width: 105px;
+    vertical-align: middle;
+}
+
+.before_text{
+    &.item-interactive.ion-valid{
+        --highlight-background: #5D7BE2 !important;
+    }
+    &.item-has-focus ion-label{
+        color: #5D7BE2;
+    }
+}
+
+.after_text{
+    &.item-interactive.ion-valid{
+        --highlight-background: #54b57e !important;
+    }
+    &.item-has-focus ion-label{
+        color: #54b57e;
+    }
+}
+
+.body_text{
+    &.item-interactive.ion-valid{
+        --highlight-background: #e55c5c !important;
+    }
+    &.item-has-focus ion-label{
+        color: #e55c5c;
+    }
+}
+
+.before_text, .body_text, .after_text{
+    & ion-label img{
+        vertical-align: bottom;
+        width: 20px;
+    }
+}
+
+.generate_btn{
+    margin-bottom: 40px;
+}
+
+.generated_text{
+    & ion-label img{
+        vertical-align: bottom;
+        width: 50px;
+    }
+}
+
+
+
+
